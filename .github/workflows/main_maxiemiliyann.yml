@@ -31,7 +31,7 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
-          name: ASP-app
+          name: Azure Web App
           path: '/published/**'
 
   deploy:
@@ -47,7 +47,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: ASP-app
+          name: Azure Web App
       
       - name: Login to Azure
         uses: azure/login@v1
